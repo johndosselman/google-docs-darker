@@ -1,18 +1,17 @@
-debugger;
-
-const canvas = document.querySelector("canvas");
-const canvasWrapper = document.createElement("div");
-canvasWrapper.style.transition = "all 200ms ease-in-out";
-canvasWrapper.classList.add("canvas-wrapper");
-canvas.parentNode.insertBefore(canvasWrapper, canvas);
-canvasWrapper.appendChild(canvas);
+const images = document.querySelectorAll("img");
 
 function enableDarkMode() {
-  canvasWrapper.style.filter = "invert(100%) hue-rotate(180deg)";
+  document.body.style.filter = "invert(100%) hue-rotate(180deg)";
+  images.forEach((img) => {
+    img.style.filter = "invert(100%) hue-rotate(180deg)";
+  });
 }
 
 function disableDarkMode() {
-  canvasWrapper.style.filter = "";
+  document.body.style.filter = "";
+  images.forEach((img) => {
+    img.style.filter = "";
+  });
 }
 
 chrome.storage.sync.get("options", (data) => {

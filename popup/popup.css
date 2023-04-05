@@ -1,8 +1,9 @@
 :root {
-  --switch-active: gold;
+  --switch-active: rgb(51, 163, 255);
   --switch-inactive: lightgray;
   --move-amount: 1rem;
 }
+
 .switch {
   width: 2rem;
   height: 1rem;
@@ -11,7 +12,7 @@
   display: flex;
   align-items: center;
   padding-left: 0.1rem;
-  transition: 200ms ease-in-out;
+  transition: 100ms ease-in-out;
 }
 
 .slider {
@@ -19,5 +20,5 @@
   aspect-ratio: 1;
   border-radius: 50%;
   background-color: white;
-  transition: 200ms ease-in-out;
+  transition: 100ms ease-in-out;
 }

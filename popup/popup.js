@@ -1,7 +1,6 @@
-const divSwitch = document.getElementById("switch");
-const divSlider = document.getElementById("slider");
+const divSwitch = document.getElementById("mode-switch");
+const divSlider = document.getElementById("mode-slider");
 const options = {};
-const test = document.getElementById("test");
 
 divSwitch.addEventListener("click", () => {
   options.darkEnabled = !options.darkEnabled;
@@ -12,7 +11,6 @@ divSwitch.addEventListener("click", () => {
     ? "var(--switch-active)"
     : "var(--switch-inactive)";
   chrome.storage.sync.set({ options });
-  test.textContent = options.darkEnabled;
   console.log(options.darkEnabled ? "Enabled dark mode" : "Disabled dark mode");
 });
 
@@ -24,6 +22,5 @@ chrome.storage.sync.get("options", (data) => {
   divSlider.style.transform = options.darkEnabled
     ? "translateX(var(--move-amount))"
     : "translateX(0)";
-  test.textContent = options.darkEnabled;
   console.log("Loaded options");
 });
