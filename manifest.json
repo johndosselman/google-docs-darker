@@ -14,7 +14,7 @@
   },
   "content_scripts": [
     {
-      "matches": ["https://*.docs.google.com/*"],
+      "matches": ["*://*.docs.google.com/*"],
       "runAt": "document_start",
       "js": ["scripts/darker.js"]
     }
