@@ -1,6 +1,7 @@
 const images = document.querySelectorAll("img");
 
 function enableDarkMode() {
+  document.body.style.transition = "200ms ease-in-out";
   document.body.style.filter = "invert(100%) hue-rotate(180deg)";
   images.forEach((img) => {
     img.style.filter = "invert(100%) hue-rotate(180deg)";
@@ -30,4 +31,12 @@ chrome.storage.onChanged.addListener((changes) => {
   } else {
     disableDarkMode();
   }
+});
+
+textColorButton.addEventListener("click", () => {
+  const colorMenu = document.querySelector(
+    ".goog-menu.goog-menu.vertical.docs-colormenuitems.docs-material.goog-menu-noaccel"
+  );
+  console.log(colorMenu);
+  colorMenu.style.filter = "invert(100%) hue-rotate(180deg)";
 });
