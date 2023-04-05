@@ -1,0 +1,23 @@
+:root {
+  --switch-active: gold;
+  --switch-inactive: lightgray;
+  --move-amount: 1rem;
+}
+.switch {
+  width: 2rem;
+  height: 1rem;
+  border-radius: 1rem;
+  background-color: lightgray;
+  display: flex;
+  align-items: center;
+  padding-left: 0.1rem;
+  transition: 200ms ease-in-out;
+}
+
+.slider {
+  width: 0.9rem;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background-color: white;
+  transition: 200ms ease-in-out;
+}

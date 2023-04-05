@@ -1,0 +1,18 @@
+{
+  "manifest_version": 3,
+  "name": "Google Docs Darker",
+  "version": "0.1.0",
+  "permissions": ["storage"],
+  "action": {
+    "default_popup": "popup/popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://*.docs.google.com/*"],
+      "runAt": "document_start",
+      "js": ["scripts/background.js"]
+    }
+  ],
+  "description": "Dark mode for Google Docs",
+  "author": "John Dosselman"
+}
